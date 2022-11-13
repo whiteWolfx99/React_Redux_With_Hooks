@@ -1,38 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+/* base styles */
+* {
+  font-family: "Quicksand";
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  transition: all 0.5s ease;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1:hover {
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: all 0.5s ease;
+  transform: scale(1.1);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.stylein {
+  border: none;
+  padding: 10px 15px 10px 15px;
+  border-radius: 5px;
+}
+
+.stylein:focus {
+  outline: none;
+}
+
+.rows {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.rows input {
+  width: 50%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.2rem;
+}
+
+.rows input:focus {
+  outline: none;
+  border: 1px solid #000;
+}
+
+.rows button {
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding: 5px;
+  color: green;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.rows button:hover {
+  background-color: green;
+  border: 1px solid green;
+  border-radius: 5px;
+  padding: 5px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.row {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 5px;
+  padding: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.makerow {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  background-attachment: fixed;
+  background-color: #f5f5f5;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 20px;
+  gap: 5px;
+  margin: 20px 0 0 0;
+  transform: scale(0.9);
+  transition: all 0.5s ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.makerow:hover {
+  transform: scale(1);
+  transition: all 0.5s ease;
+}
+
+.col-1 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button {
+ display: flex;
+ flex-direction: row;
+ gap: 5px;
+}
+
+.remove {
+  background-color: #f5f5f5;
+  border: 1px solid #f5f5f5;
+  border-radius: 5px;
+  padding: 5px;
+  color: #ed0000;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.remove:hover {
+  background-color: #ed0000;
+  border: 1px solid #ed0000;
+  color: #fff;
+  border-radius: 5px;
+  padding: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.edit {
+  background-color: #f5f5f5;
+  border: 1px solid #f5f5f5;
+  border-radius: 5px;
+  padding: 5px;
+  color: #ff8903;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.edit:hover {
+  background-color: #ff8903;
+  border: 1px solid #ff8903;
+  color: #fff;
+  border-radius: 5px;
+  padding: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.5s ease;
 }
