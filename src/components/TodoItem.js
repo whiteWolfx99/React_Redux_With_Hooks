@@ -9,11 +9,21 @@ function TodoItem({ todo }) {
   const [todos, setTodos] = useState(false);
   const [title, setTitle] = useState(todo.title);
 
+  const editTotoHandler = () => {
+    dispatch(
+      EDITtodo({
+        ...todo,
+        title: title,
+      })
+    );
+    setTodos(!todos);
+  };
+
   return (
     <div className="center">
       <div className="makerow">
         <div className="col-1">
-            {/* display */}
+          {/* display */}
           <div>#{todo.id}</div>
           <div>
             {todos ? (
@@ -29,24 +39,13 @@ function TodoItem({ todo }) {
           </div>
           <div className="button">
             {/* edit button */}
-            <button
-              onClick={() => {
-                dispatch(
-                  EDITtodo({
-                    ...todo,
-                    title: title,
-                  })
-                );
-                setTodos(!todos);
-              }}
-              className="edit"
-            >
+            <button onClick={editTotoHandler} className="edit">
               Edit
             </button>
             {/*  delete button */}
             <button
-            // onconfirm 
-              onClick={() =>dispatch(removetodo(todo.id))}
+              // onconfirm
+              onClick={() => dispatch(removetodo(todo.id))}
               className="remove"
             >
               Delete
